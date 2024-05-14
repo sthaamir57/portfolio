@@ -1,5 +1,5 @@
 import { Link, animateScroll as scroll } from "react-scroll"
-import { Button } from "../OneForAll/Button"
+import Button from "../OneForAll/Button"
 
 const Nav = () => {
   return ( 
@@ -15,7 +15,7 @@ const Nav = () => {
                     My Works
                 </div>
             </Link>
-            <Link className="cursor-pointer" to="myWorks" smooth={true} duration={500}>
+            <Link className="cursor-pointer" to="contact" smooth={true} duration={500}>
                 <Button btnText="Hire Me" />
             </Link>
         </div>
