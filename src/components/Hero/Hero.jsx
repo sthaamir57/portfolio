@@ -14,11 +14,11 @@ const Hero = ({scrollYProgress}) => {
     return (
         
         <section className="sticky top-0 flex flex-col items-center justify-center h-screen overflow-hidden ">
-            <motion.h2  style={{translateY : x1, opacity: opSlow,  filter : blur}} className="flex flex-row items-center gap-2 mb-4">
+            <motion.h2  style={{translateY : x1, opacity: opSlow,  filter : blur}} className="flex flex-row items-center gap-[1vw] mb-[2vw]">
                 <Pulse />
-                <span className="text-2xl tracking-tight cursor-text">Open for work</span>
+                <span className="text-[1.8vw] tracking-tight cursor-text">Open for work</span>
             </motion.h2>
-            <h1 className="leading-[0.92] text-center text-8xl font-display cursor-text">
+            <h1 className="leading-[0.92] text-center text-[8.5vw] font-display cursor-text">
                 <motion.span
                     style={{translateX : x1, opacity: op, filter : blurFast}}
                     className="inline-block"
@@ -32,7 +32,7 @@ const Hero = ({scrollYProgress}) => {
                 >& Designer</motion.span>
             </h1>
 
-            <motion.div style={{bottom : x2, opacity: op, filter : blur}} className="absolute flex bottom-0 animate-bounce animate-duration-[25000ms] pb-2">
+            <motion.div style={{bottom : x2, opacity: op, filter : blur}} className="absolute text-base flex bottom-0 animate-bounce animate-duration-[25000ms] pb-2">
                 <span className="inline-block">Recent</span>
                 <ArrowIcon />
                 <span className="inline-block">Works</span>
