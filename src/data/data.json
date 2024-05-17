@@ -1,0 +1,16 @@
+{
+    "portfolio": [
+        {
+            "id": 1,
+            "src": "./img/place.png",
+            "title": "Project",
+            "tools": ["react", "html"]
+        },
+        {
+            "id": 2,
+            "src": "./img/place.png",
+            "title": "Project",
+            "tools": ["react", "html"]
+        }
+    ]
+}
