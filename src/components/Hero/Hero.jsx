@@ -1,6 +1,7 @@
 import Pulse from "./components/Pulse/Pulse"
 import ArrowIcon from "./components/ArrowIcon/ArrowIcon"
 import { useTransform, motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Hero = ({scrollYProgress}) => {
 
@@ -10,10 +11,11 @@ const Hero = ({scrollYProgress}) => {
     const opSlow = useTransform(scrollYProgress, [0, 1], [1, -1.6]);
     const blur = useTransform(scrollYProgress, [0, 1], ['blur(0px)', 'blur(20px)']);
     const blurFast = useTransform(scrollYProgress, [0, 1], ['blur(0px)', 'blur(30px)']);
+    // const colorChange = useTransform(scrollYProgress, [0, 1], ['#090909', '#000000']);
 
     return (
         
-        <section className="sticky top-0 flex flex-col items-center justify-center h-screen overflow-hidden ">
+        <section className="sticky top-0 flex flex-col items-center justify-center h-[80vh] overflow-hidden ">
             <motion.h2  style={{translateY : x1, opacity: opSlow,  filter : blur}} className="flex flex-row items-center gap-[1vw] mb-[2vw]">
                 <Pulse />
                 <span className="text-[1.8vw] tracking-tight cursor-text">Open for work</span>
@@ -32,11 +34,17 @@ const Hero = ({scrollYProgress}) => {
                 >& Designer</motion.span>
             </h1>
 
-            <motion.div style={{bottom : x2, opacity: op, filter : blur}} className="absolute text-base flex bottom-0 animate-bounce animate-duration-[25000ms] pb-2">
-                <span className="inline-block">Recent</span>
-                <ArrowIcon />
-                <span className="inline-block">Works</span>
+            
+            <motion.div style={{bottom : x2, opacity: op, filter : blur}} className="absolute text-base bottom-0 animate-bounce animate-duration-[25000ms] pb-2">
+                <Link className="flex cursor-pointer" to="myWorks" smooth={true} duration={500}>
+                    <span className="inline-block">Recent</span>
+                    <ArrowIcon />
+                    <span className="inline-block">Works</span>
+                </Link>
             </motion.div>
+            
+
+            
             
         </section>
     )
